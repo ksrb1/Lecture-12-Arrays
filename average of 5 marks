@@ -1,0 +1,15 @@
+int marks[5];
+	int sum{};
+	for (int i{ 0 }; i < 5; i++) {
+		cout << "Enter the marks for subject" << (i + 1) << ": ";
+		cin >> marks[i];
+		while (cin.fail() || marks[i] < 0 || marks[i] > 101) {
+			cout << "Invalid input.Please enter a correct input:";
+			cin.clear();
+			cin.ignore(1000, '\n');
+			cin >> marks[i];
+
+		}
+		sum += marks[i];
+	}
+	cout << (sum / 5) << endl;
